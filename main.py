@@ -13,26 +13,25 @@ def getInput():
     return inputText
 
 def getGoogleResults(string):
-	service = build("customsearch", "v1", developerKey=API_KEY)
+    service = build("customsearch", "v1", developerKey=API_KEY)
 
-	res = service.cse().list(q='something', cx=CSE_ID).execute()
-	items = res['items']
-	soId = []
-	for item in items:
-	    # pprint.pprint(item)
-	    if item['link'].startswith("http://stackoverflow.com/questions/"): 
-	    	nextSlash = item['link'][35:].find('/')
-	    	if nextSlash != -1:
-			    # pprint.pprint(item['link'][30:])
+    res = service.cse().list(q='something', cx=CSE_ID).execute()
+    items = res['items']
+    soId = []
+    for item in items:
+        if item['link'].startswith("http://stackoverflow.com/questions/"):
+            nextSlash = item['link'][35:].find('/')
+            if nextSlash != -1:
+                # pprint.pprint(item['link'][30:])
 			    #print(item['link'][35:35+nextSlash])
 			    soId.append(item['link'][35:35+nextSlash])
-	return soId
+    return soId
 
 def main():
     lst = getGoogleResults(getInput())
     print(lst)
     for item in lst:
-    	stackapi.getSOApiResults(item)
+        stackapi.getSOApiResults(item)
 main()
 
 

@@ -10,10 +10,7 @@ def getSOApiResults(soID):
 
 
     s = stackexchange.Site("api.stackoverflow.com")
-    q = s.question(soID)
-    a = q.answers[1].id
     qu = s.question(soID).url
-    # print qu
 
 
     response = urllib2.urlopen(qu)
@@ -62,6 +59,4 @@ def getSOApiResults(soID):
 
         # print st.find(deans, f1a)
         if (st.find(deans, f1a) == -1):
-            break;
-
-            # print st[13300:13412+600]
+            break
