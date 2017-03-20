@@ -9,4 +9,5 @@ service = build("customsearch", "v1", developerKey=API_KEY)
 res = service.cse().list(q='something', cx=CSE_ID).execute()
 items = res['items']
 for item in items:
+    print("-------**-------" + item + "-------**-------" )
     pprint.pprint(item)
