@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="net.sourceforge.earticleast.app.movedeclaration"
+            name="Get Hints from Stack Overflow">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            id="net.sourceforge.earticleast.app.objectContribution1"
+            objectClass="org.eclipse.jdt.core.ICompilationUnit">
+         <action
+               class="org.cs259.stackoverflowhelper.ASTArticleActionDelegate"
+               id="net.sourceforge.earticleast.app.astArticleAction1"
+               label="Search StackOverflow"/>
+      </objectContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="true"
+            locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+         <command
+               commandId="net.sourceforge.earticleast.app.movedeclaration"
+               label="Search StackOverflow"
+               style="push">
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="org.cs259.stackoverflowhelper.ASTArticleHandler"
+            commandId="net.sourceforge.earticleast.app.movedeclaration">
+      </handler>
+   </extension>
+
+</plugin>
