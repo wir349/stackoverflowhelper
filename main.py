@@ -3,9 +3,9 @@ import googleapi
 import stackapi
 
 def main(argv):
-    lst = googleapi.getGoogleResults(argv[0])
-    for item in lst:
-        stackapi.getSOApiResults(item)
+    lst = googleapi.getGoogleResults(argv)
+    if lst:
+        print stackapi.getSOApiResults(lst[0])
 
 if __name__ == "__main__":
     main(sys.argv[1:])

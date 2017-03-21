@@ -1,5 +1,4 @@
 from googleapiclient.discovery import build
-import pprint
 
 API_KEY = "AIzaSyCJLui_HD-THLZkEmBmWvfsj1GLjCx_M9A"
 CSE_ID = "008171140621555576608:krdkbofgvt8"
