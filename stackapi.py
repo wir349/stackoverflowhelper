@@ -23,12 +23,8 @@ def getSOApiResults(soID):
     upv = 'up vote'
 
     f1a = 0
-    f2a = 0
-    ii = 100
     i = 0
-    iii = 0
     qn = []
-    qa = []
     while (f1a != -2):
         f1a = st.find(deans, f1a)
         f2a = f1a + 50
