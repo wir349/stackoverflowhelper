@@ -8,4 +8,6 @@ def getScore(a):
 
 def getSOApiResults(qid):
     answers = so.question(qid).answers
+    print so.question(qid)
+    print("Link: http://stackoverflow.com/questions/" + qid)
     return sorted(answers, key=getScore, reverse=True)

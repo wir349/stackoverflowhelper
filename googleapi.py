@@ -1,7 +1,7 @@
 from googleapiclient.discovery import build
 
-API_KEY = "AIzaSyCJLui_HD-THLZkEmBmWvfsj1GLjCx_M9A"
-CSE_ID = "008171140621555576608:krdkbofgvt8"
+API_KEY = "AIzaSyCplGtbbbEW27P8UQVCgf4xXtr4ou044og"
+CSE_ID = "015349106293630255420:l3euh1pkngq"
 
 service = build("customsearch", "v1", developerKey=API_KEY)
 
