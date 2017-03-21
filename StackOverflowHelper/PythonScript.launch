@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.ui.externaltools.ProgramLaunchConfigurationType">
+<stringAttribute key="bad_container_name" value="/net.sourceforge.earticleast.app/sss"/>
+<booleanAttribute key="org.eclipse.debug.ui.ATTR_APPEND_TO_FILE" value="true"/>
+<stringAttribute key="org.eclipse.debug.ui.ATTR_CAPTURE_IN_FILE" value="${workspace_loc:/net.sourceforge.earticleast.app}/something.txt"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_LOCATION" value="/System/Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_TOOL_ARGUMENTS" value="&quot;/Users/waleed/PycharmProjects/stackoverflowhelper/main.py&quot; &quot;java stackoverflow someheuristic&quot;"/>
+</launchConfiguration>
